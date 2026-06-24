@@ -1,0 +1,32 @@
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo '<!DOCTYPE html><html><head><title>EC2 Web Server</title>
+</head><body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+    <h1>Server Launched Successfully!</h1><p>Task Completed.</p></body></html>' > /var/www/html/index.html
+
+//project 2
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo '<html><body style="font-family:sans-serif; text-align:center; 
+margin-top:50px; background-color:#ffffff;">
+<h1>Response from SERVER 1</h1></body></html>' > /var/www/html/index.html
+
+//project 3
+
+#!/bin/bash
+yum update -y
+yum install -y httpd stress
+systemctl start httpd
+systemctl enable httpd
+echo "<html><body style='font-family:sans-serif; text-align:center;
+ margin-top:50px; background-color:#ffffff;'>
+<h1>Response from autoscaled server: $(hostname -f)</h1></body>
+</html>" > /var/www/html/index.html
