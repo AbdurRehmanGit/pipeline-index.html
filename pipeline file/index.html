@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AWS </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            background: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 8px solid #ff9900; /* AWS Orange Color */
+        }
+        h1 {
+            color: #232f3e; /* AWS Dark Blue */
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .btn {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #ec7211;
+        }
+        .project-list {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            background: #fcfcfc;
+            padding: 20px;
+            border-left: 5px solid #232f3e;
+            border-radius: 4px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        strong {
+            color: #ec7211;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AWS</h1>
+        <p>AWS stands for Amazon Web Services. It is the world's most comprehensive and broadly adopted cloud computing platform.
+             Instead of buying and maintaining physical servers in a local office or data center, businesses 
+            and individuals can rent computing power, storage, and databases over the internet on a pay-as-you-go basis.</p>
+        
+        <!-- Tasks Dikhane Wala Button -->
+        <button class="btn" onclick="toggleProjects()">Show My AWS Tasks</button>
+
+        <!-- Projects Ki List (Jo Shuru Mein Chupi Hogi) -->
+        <div id="projectList" class="project-list">
+            <h3>My Completed Tasks & Projects:</h3>
+            <ul>
+                <li><strong>Task 1: </strong> - Done.</li>
+                <li><strong>Task 2: </strong> - Done.</li>
+                <li><strong>Task 3: </strong> - Done.</li>
+                <li><strong>Task 4: </strong> - Done.</li>
+                <li><strong>Task 5: </strong> - Done.</li>
+                <li><strong>Task 6: </strong> - Done.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Pipeline</h1>
+        <p>AWS CodePipeline aur uske components CodeBuild, CodeDeploy hain. Jab software houses mein software banta hai,
+             toh usay developer ke laptop se nikal kar internet par
+             live chalane tak ke poore automatic raste ko CI/CD Pipeline hain.
+
+.</p>
+        
+        <!-- Tasks Dikhane Wala Button -->
+        <button class="btn" onclick="toggleProjects()">Show My Pipeline Tasks</button>
+
+        <!-- Projects Ki List (Jo Shuru Mein Chupi Hogi) -->
+        <div id="projectList" class="project-list">
+            <h3>My Completed Tasks & Projects:</h3>
+            <ul>
+                <li><strong>Task 1: </strong> - Done.</li>
+                <li><strong>Task 2: </strong> - Done.</li>
+                <li><strong>Task 3: </strong> - Done.</li>
+                <li><strong>Task 4: </strong> - Done.</li>
+                <li><strong>Task 5: </strong> - Done.</li>
+                <li><strong>Task 6: </strong> - Done.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Button click par list ko show/hide karne ka javascript function
+        function toggleProjects() {
+            var list = document.getElementById("projectList");
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
